@@ -2,8 +2,10 @@ package com.medicare.capstone.medicareeurekaServer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
+@EnableEurekaServer
 public class MedicareEurekaServerApplication {
 
 	public static void main(String[] args) {
