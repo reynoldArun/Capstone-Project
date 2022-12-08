@@ -10,18 +10,18 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/admin")
+@RequestMapping("/")
 public class AdminController {
 
     @Autowired
     private AdminService adminService;
 
-    @PostMapping("/add-admin")
+    @PostMapping("/add")
     public ResponseEntity<String> AddAdmin(@RequestBody AdminDto adminDto) {
         return ResponseEntity.status(200).body(adminService.AddAdmin(adminDto));
     }
 
-    @GetMapping("/all-admin")
+    @GetMapping("/all")
     public ResponseEntity<List<Admin>> GetAllAdmins() {
         return ResponseEntity.status(200).body(adminService.GetAllAdmin());
     }

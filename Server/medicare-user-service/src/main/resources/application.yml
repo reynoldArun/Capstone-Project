@@ -1,7 +1,12 @@
 server:
-  port: 8081
+  port: 9001
+
+
+
 
 spring:
+  application:
+    name: user-service
   datasource:
     url: jdbc:mysql://localhost:3306/medicine
     password: root
@@ -17,3 +22,4 @@ spring:
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
+

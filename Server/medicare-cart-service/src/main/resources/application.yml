@@ -1,8 +1,12 @@
-
 server:
-  port: 8084
+  port: 9003
+
+
+
 
 spring:
+  application:
+    name: cart-service
   datasource:
     url: jdbc:mysql://localhost:3306/medicine
     password: root
@@ -18,3 +22,4 @@ spring:
         globally_quoted_identifiers: true
         dialect: org.hibernate.dialect.MySQL8Dialect
         format_sql: true
+
