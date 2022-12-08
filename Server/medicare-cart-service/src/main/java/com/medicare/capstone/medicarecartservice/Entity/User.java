@@ -1,4 +1,4 @@
-package com.medicare.capstone.medicareuserservice.Entity;
+package com.medicare.capstone.medicarecartservice.Entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
