@@ -11,6 +11,18 @@ spring:
             - Path=/admin/**
           filters:
             - StripPrefix=1
+        - id : user-service
+          uri : lb://user-service
+          predicates :
+            - Path=/user/**
+          filters :
+            - StripPrefix=1
+        - id : product-service
+          uri : lb://product-service
+          predicates :
+            - Path=/product/**
+          filters :
+            - StripPrefix=1
 
 server:
   port: 8080
