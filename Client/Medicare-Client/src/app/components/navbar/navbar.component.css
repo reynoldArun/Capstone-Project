@@ -1,13 +1,22 @@
 nav {
     background: #10847E;
     padding: 10px 20px;
-    height: 120px;
+    height: 140px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     color: whitesmoke;
     font-weight: 600;
+    
+}
 
+.logo  > a > img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo > a > p {
+    font-size: 0.45rem;
 }
 
 .nav__links {
@@ -36,9 +45,9 @@ nav {
 
 .fa-cart-shopping:after {
     content: attr(value);
-    font-size: 12px;
+    font-size: 15px;
     color: #fff;
-    background: red;
+    background: #FFA700;
     border-radius: 50%;
     padding: 0 5px;
     position: relative;
@@ -75,6 +84,10 @@ a {
     .nav__inputs {
         width: 30%;
 
+    }
+
+    .logo > a > p {
+        font-size: 1rem;
     }
 }
 
