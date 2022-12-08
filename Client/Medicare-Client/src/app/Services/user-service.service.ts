@@ -18,8 +18,8 @@ export class UserServiceService {
     return this.http.get<any>("http://localhost:8080/user/all")
   }
 
-  public DeleteUser() {
-
+  public DeleteUser(id:any) {
+    return this.http.delete("http://localhost:9001/delete/"+id, {responseType: 'text' as 'json'})
   }
 
   public GetUserById() {

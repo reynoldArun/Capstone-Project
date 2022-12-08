@@ -14,6 +14,10 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ErrorboxComponent } from './components/errorbox/errorbox.component';
+import { CreateuserComponent } from './components/createuser/createuser.component';
+import { CreateproductComponent } from './components/createproduct/createproduct.component';
+import { ShowusersComponent } from './components/showusers/showusers.component';
+import { ShowproductsComponent } from './components/showproducts/showproducts.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { ErrorboxComponent } from './components/errorbox/errorbox.component';
     AdminComponent,
     AdminDashboardComponent,
     HomeComponent,
-    ErrorboxComponent
+    ErrorboxComponent,
+    CreateuserComponent,
+    CreateproductComponent,
+    ShowusersComponent,
+    ShowproductsComponent
   ],
   imports: [
     BrowserModule,
