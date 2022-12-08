@@ -14,7 +14,7 @@ const routes: Routes = [
   {path: 'account/register', component:RegisterComponent},
   {path: 'account/admin', component:AdminComponent},
   {path: 'admin/dashboard', component:AdminDashboardComponent},
-  {path: 'account/admin/cart', component:CartComponent}
+  {path: 'account/user/cart/:id', component:CartComponent}
 ];
 
 @NgModule({

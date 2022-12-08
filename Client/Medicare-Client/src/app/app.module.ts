@@ -13,6 +13,7 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ErrorboxComponent } from './components/errorbox/errorbox.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     AdminComponent,
     AdminDashboardComponent,
-    HomeComponent
+    HomeComponent,
+    ErrorboxComponent
   ],
   imports: [
     BrowserModule,

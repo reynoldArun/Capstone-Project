@@ -5,9 +5,12 @@
          <h1>Login</h1>
      </div>
      <div class="login__inputs">
-         Email<input type="text" name="userEmail">
-         Password<input type="password" name="userPassword">
-         <button class="login__btn">Login</button>
+        Email<input type="text" name="userEmail" [(ngModel)]="userEmail" required #email="ngModel">
+        <br><span *ngIf="email.invalid && email.touched" style="color : red">Enter a valid email</span>
+        Password<input type="password" name="userPassword" [(ngModel)]="userPassword" required #pass="ngModel">
+        <br><span *ngIf="pass.invalid && pass.touched" style="color : red">Enter a valid password</span>
+         <button class="login__btn" (click)="Login()">Login</button>
+         <br><span *ngIf="error" style="color : red">Incorrect Email and Password</span>
      </div>
      <div class="login__footer">
          <p>New User - <a routerLink="/account/register">Register Here</a></p>
