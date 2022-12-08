@@ -3,26 +3,26 @@
 }
 
 hr {
-    border: 1px solid red;
+    border: 1px solid grey;
 }
 
 .footer__grid {
     display: grid;
     grid-template-columns: 1fr;
-    
+
 }
 
-.footer__grid > h1 {
+.footer__grid>h1 {
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 600;
 }
 
-.footer__grid > ul {
+.footer__grid>ul {
     margin: 10px 0px;
 }
 
-.footer__grid > ul > li {
+.footer__grid>ul>li {
     margin: 5px 0px;
 }
 

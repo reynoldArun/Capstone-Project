@@ -1,0 +1,43 @@
+.admin {
+    height: 70vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.admin__container {
+    width: 25rem;
+    height: 25rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 5px solid #FFA700;
+}
+
+.admin__inputs {
+    align-items: center;
+    height: 12.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.admin__inputs>input {
+    width: 9.375rem;
+    height: 25px;
+}
+
+
+.admin__btn {
+    background-color: #FFA700;
+    height: 2rem;
+    width: 5rem;
+    border: none;
+    font-family: 'Space Mono', monospace;
+}
+
+.admin__footer>a {
+    cursor: pointer;
+    text-decoration: underline;
+}

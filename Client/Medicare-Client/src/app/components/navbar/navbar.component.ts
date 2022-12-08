@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: Router) { }
+
+  isDisabled:boolean = true
+  id:any
 
   ngOnInit(): void {
+    let CheckUrl =  this.route.url === '/account/login' || this.route.url === '/account/register' || this.route.url === '/account/admin'
+    if(CheckUrl) {
+      this.isDisabled = false;
+    }
   }
+
+ 
 
 }

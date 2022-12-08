@@ -1,0 +1,46 @@
+.register {
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+}
+
+.register__container {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 5px solid #FFA700;
+}
+
+.register__inputs {
+    align-items: center;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.register__inputs>input {
+    width: 150px;
+    height: 25px;
+}
+
+.register__btn {
+    background-color: #FFA700;
+    height: 3rem;
+    width: 5rem;
+    border: none;
+    font-family: 'Space Mono', monospace;
+    margin-top: 10px;
+}
+
+
+.register__footer>a {
+    cursor: pointer;
+    text-decoration: underline;
+}
