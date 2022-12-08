@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+import { AdminServiceService } from './../../Services/admin-service.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private Service: AdminServiceService, private router: Router) { }
 
-  ngOnInit(): void {
+  adminUsername: any = ''
+  adminPass: any = ''
+  error:boolean=false;
+  ngOnInit(): void { }
+
+  admin() {
+    this.Service.GetAllAdmin().subscribe(data => {
+      data.forEach((person: any) => {
+        if (this.adminUsername == person.name && this.adminPass == person.password) {
+          localStorage.setItem('token', 'admintoken')
+          this.router.navigate(['/admin/dashboard'])
+        } else {
+          this.error = true
+          setTimeout(() => {
+            this.error = false
+            this.adminUsername = ''
+            this.adminPass = ''
+          }, 3000)
+        }
+      })
+    })
   }
 
 }
+
+

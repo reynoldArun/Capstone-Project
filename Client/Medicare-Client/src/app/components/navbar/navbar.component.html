@@ -5,7 +5,7 @@
             <p>Medicare</p>
         </a>
     </div>
-    <div class="nav__inputs">
+    <div class="nav__inputs" *ngIf="isDisabled">
         <input type="text" placeholder="Search for medicine">
     </div>
     <div class="nav__links">

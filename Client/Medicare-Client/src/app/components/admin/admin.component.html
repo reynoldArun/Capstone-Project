@@ -5,9 +5,12 @@
          <h1>Admin</h1>
      </div>
      <div class="admin__inputs">
-         UserName<input type="text" name="adminUsername">
-         Password<input type="password" name="adminPass">
-         <button class="admin__btn">Login</button>
+          UserName<input type="text" name="adminUsername" [(ngModel)]="adminUsername" #username="ngModel" required>
+         <br><span *ngIf="username.invalid && username.touched" style="color : red">Enter a valid username</span>
+         Password<input type="password" name="adminPass" [(ngModel)]="adminPass" required #pass="ngModel">
+         <br><span *ngIf="pass.invalid && pass.touched" style="color : red">Enter a valid password</span>
+         <button class="admin__btn" (click)="admin()">Login</button>
+         <br><span *ngIf="error" style="color : red">Incorrect Username and Password</span>
      </div>
      <div class="admin__footer">
         <p><a routerLink="/account/login">Login as user</a></p>

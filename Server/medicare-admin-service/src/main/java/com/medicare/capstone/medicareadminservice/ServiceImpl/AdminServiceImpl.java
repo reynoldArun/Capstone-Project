@@ -24,8 +24,8 @@ public class AdminServiceImpl implements AdminService {
     public String AddAdmin(AdminDto adminDto) {
         Admin newAdmin = new Admin();
         newAdmin.setName(adminDto.getName());
-        newAdmin.setEmail(adminDto.getEmail());
         newAdmin.setPassword(adminDto.getPassword());
+        newAdmin.setEmail(adminDto.getEmail());
         adminRepository.save(newAdmin);
         return "Admin Created";
     }

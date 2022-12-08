@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class AdminDto {
     private long id;
     private String name;
-    private String email;
     private String password;
+    private String email;
 }
