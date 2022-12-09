@@ -1,4 +1,5 @@
 <app-navbar [Length]="Length"></app-navbar>
+<app-messagebox [message]="message" *ngIf="showMessage"></app-messagebox>
 <section class="cart" *ngIf="carts.length <= 0">
     <h2>Your Bag</h2>
     <h4 class="cart__empty">is currently empty</h4>

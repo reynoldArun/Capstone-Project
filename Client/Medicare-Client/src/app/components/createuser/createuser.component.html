@@ -1,1 +1,17 @@
-<p>createuser works!</p>
+<app-navbar></app-navbar>
+<section class="user">
+    <div class="user__left">
+        <img src="../../../assets/images/banner.jpg" alt="banner">
+    </div>
+    <div class="user__right">
+        username<input type="text" name="username" [(ngModel)]="user.name" required #name="ngModel">
+        <br><span *ngIf="name.invalid && name.touched" style="color : red">Enter a valid Name</span>
+        Password<input type="password" name="password" [(ngModel)]="user.password" required #pass="ngModel">
+        <br><span *ngIf="pass.invalid && pass.touched" style="color : red">Enter a valid password</span>
+        Email<input type="email" name="userEmail" [(ngModel)]="user.email" required #email="ngModel">
+        <br><span *ngIf="email.invalid && email.touched" style="color : red">Enter a valid email</span>
+        Phone<input type="text" name="userPhone" [(ngModel)]="user.phoneNumber" required #pass="ngModel">
+        <br><span *ngIf="pass.invalid && pass.touched" style="color : red">Enter a valid Phone</span>
+        <button class="user__btn" (click)="CreateUser()">Create User</button>
+    </div>
+</section>

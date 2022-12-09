@@ -15,8 +15,10 @@ export class CartComponent implements OnInit {
   uid:any
   grandTotal:any
   user:User = new User()
+  message:any
 
   Length:any;
+  showMessage:boolean = false;
 
   constructor(private Uservice: UserServiceService, private Service:CartServiceService, private active: ActivatedRoute) { }
 
@@ -68,9 +70,17 @@ export class CartComponent implements OnInit {
     this.Service.DeleteCartItems(id).subscribe(res => {
       this.carts.splice(index, 1)
       if(res === 'Deleted!!') {
-        alert("Item removed")
+        this.message = "Medicine Removed !!"
+        this.showMessage = true
+      setTimeout(() => {
+        this.showMessage = false
+      }, 1000);
       } else {
-        alert("Something went wrong !!!")
+        this.message = "Something went Wrong!!"
+        this.showMessage = true
+      setTimeout(() => {
+        this.showMessage = false
+      }, 1000);
       }
     })
   }

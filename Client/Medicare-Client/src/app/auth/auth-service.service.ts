@@ -8,15 +8,11 @@ export class AuthServiceService {
   constructor() { }
 
   isAdminLoggedIn() {
-    return localStorage.getItem('atoken')
+    return !!localStorage.getItem('token')
   }
 
   isUserLoggedIn() {
-    return localStorage.getItem('token')
-  }
-
-  isProtected() {
-    return localStorage.getItem('token')
+    return !!localStorage.getItem('token')
   }
 
 }

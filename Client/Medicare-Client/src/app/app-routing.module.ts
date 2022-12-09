@@ -1,4 +1,3 @@
-import { BasicGuard } from './auth/basic.guard';
 import { UserGuard } from './auth/user.guard';
 import { ViewproductsComponent } from './components/viewproducts/viewproducts.component';
 import { ShowproductsComponent } from './components/showproducts/showproducts.component';
@@ -17,8 +16,8 @@ import { CreateuserComponent } from './components/createuser/createuser.componen
 const routes: Routes = [
   {path: 'home', component:HomeComponent },
   {path: '', redirectTo:'home', pathMatch: 'full'},
-  {path: 'account/login', component:LoginComponent, canActivate:[BasicGuard]},
-  {path: 'account/register', component:RegisterComponent, canActivate:[BasicGuard]},
+  {path: 'account/login', component:LoginComponent},
+  {path: 'account/register', component:RegisterComponent},
   {path: 'account/admin', component:AdminComponent},
   {path: 'admin/dashboard', component:AdminDashboardComponent, canActivate: [UserGuard]},
   {path: 'account/user/cart/:id', component:CartComponent},

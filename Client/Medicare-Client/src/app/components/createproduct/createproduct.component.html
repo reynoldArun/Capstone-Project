@@ -1,1 +1,19 @@
-<p>createproduct works!</p>
+<app-navbar></app-navbar>
+<section class="product">
+    <div class="product__left">
+        <img src="../../../assets/images/banner.jpg" alt="banner">
+    </div>
+    <div class="product__right">
+        ProductName<input type="text" name="productname" [(ngModel)]="product.productName" required #name="ngModel">
+        <br><span *ngIf="name.invalid && name.touched" style="color : red">Enter a valid Product Name</span>
+        Image<input type="text" name="img" [(ngModel)]="product.img" required #img="ngModel">
+        <br><span *ngIf="img.invalid && img.touched" style="color : red">Enter a valid url</span>
+        Category<input type="text" name="category" [(ngModel)]="product.category" required #category="ngModel">
+        <br><span *ngIf="category.invalid && category.touched" style="color : red">Category is missing</span>
+        Amount<input type="text" name="amount" [(ngModel)]="product.amount" required #amount="ngModel">
+        <br><span *ngIf="amount.invalid && amount.touched" style="color : red">amount is missing</span>
+        Quantity<input type="text" name="quantity" [(ngModel)]="product.quantity" required #quantity="ngModel">
+        <br><span *ngIf="quantity.invalid && quantity.touched" style="color : red">Quantity is missing</span>
+        <button class="product__btn" (click)="CreateProduct()">Create User</button>
+    </div>
+</section>

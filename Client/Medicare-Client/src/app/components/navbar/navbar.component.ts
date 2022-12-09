@@ -16,7 +16,7 @@ export class NavbarComponent implements OnInit {
   userId:any
   logoutDisabled:boolean = false
   @Input() Length:any
-  
+  isAdmin:boolean = false;
 
  
 
@@ -32,12 +32,17 @@ export class NavbarComponent implements OnInit {
       this.logoutDisabled = true
       this.isDisabled = false
     }
+    if(checkToken === 'admintoken') {
+      this.isAdmin = true
+    }
   }
 
   logout() {
     localStorage.clear()
     this.logoutDisabled = false;
     this.isDisabled = true
+    this.isAdmin = false
+    this.route.navigate(['/home'])
   }
 
   Cart() {
