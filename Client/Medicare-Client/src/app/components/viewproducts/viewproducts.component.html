@@ -2,14 +2,6 @@
 <app-messagebox [message]="message" *ngIf="showMessage"></app-messagebox>
 <section class="medicine">
     <h1>View Medicines</h1>
-    <div class="medicine__category">
-        <ul>
-            <li>All medicine</li>
-            <li>Tablet</li>
-            <li>Syrup</li>
-            <li>Masks</li>
-        </ul>
-    </div>
     <div class="medicine__container">
         <div class="medicine__items" *ngFor="let product of products">
             <img src="" alt="">
