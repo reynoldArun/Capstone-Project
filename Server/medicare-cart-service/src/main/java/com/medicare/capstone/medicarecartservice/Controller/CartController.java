@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
+@CrossOrigin("*")
 public class CartController {
 
     @Autowired
@@ -39,7 +40,7 @@ public class CartController {
     }
 
     @GetMapping("/all/{id}")
-    public ResponseEntity<List<Cart>> GetAllCartItems(long id) {
+    public ResponseEntity<List<Cart>> GetAllCartItems(@PathVariable long id) {
         return ResponseEntity.status(200).body(cartService.getAllByUserCart(id));
     }
 

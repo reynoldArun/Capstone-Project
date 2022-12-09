@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,15 +11,33 @@ export class NavbarComponent implements OnInit {
   constructor(private route: Router) { }
 
   isDisabled:boolean = true
+  isToDisabled:boolean = true
   id:any
   userId:any
+  logoutDisabled:boolean = false
+  @Input() Length:any
+  
+
+ 
 
   ngOnInit(): void {
     this.userId = localStorage.getItem('id')
     let CheckUrl =  this.route.url === '/account/login' || this.route.url === '/account/register' || this.route.url === '/account/admin'
     if(CheckUrl) {
       this.isDisabled = false;
+      this.isToDisabled = false;
     }
+    let checkToken = localStorage.getItem('token')
+    if(checkToken !== null) {
+      this.logoutDisabled = true
+      this.isDisabled = false
+    }
+  }
+
+  logout() {
+    localStorage.clear()
+    this.logoutDisabled = false;
+    this.isDisabled = true
   }
 
   Cart() {

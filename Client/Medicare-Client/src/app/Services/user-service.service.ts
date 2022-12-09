@@ -22,7 +22,7 @@ export class UserServiceService {
     return this.http.delete("http://localhost:9001/delete/"+id, {responseType: 'text' as 'json'})
   }
 
-  public GetUserById() {
-
+  public GetUserById(id:any) {
+    return this.http.get("http://localhost:9001/single/"+id)
   }
 }
