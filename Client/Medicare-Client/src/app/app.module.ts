@@ -18,6 +18,10 @@ import { CreateuserComponent } from './components/createuser/createuser.componen
 import { CreateproductComponent } from './components/createproduct/createproduct.component';
 import { ShowusersComponent } from './components/showusers/showusers.component';
 import { ShowproductsComponent } from './components/showproducts/showproducts.component';
+import { AboutComponent } from './components/about/about.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { ViewproductsComponent } from './components/viewproducts/viewproducts.component';
+import { MessageboxComponent } from './components/messagebox/messagebox.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { ShowproductsComponent } from './components/showproducts/showproducts.co
     CreateuserComponent,
     CreateproductComponent,
     ShowusersComponent,
-    ShowproductsComponent
+    ShowproductsComponent,
+    AboutComponent,
+    HeroComponent,
+    ViewproductsComponent,
+    MessageboxComponent
   ],
   imports: [
     BrowserModule,

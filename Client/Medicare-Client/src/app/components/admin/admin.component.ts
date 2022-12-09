@@ -20,7 +20,7 @@ export class AdminComponent implements OnInit {
     this.Service.GetAllAdmin().subscribe(data => {
       data.forEach((person: any) => {
         if (this.adminUsername == person.name && this.adminPass == person.password) {
-          localStorage.setItem('token', 'admintoken')
+          localStorage.setItem('atoken', 'admintoken')
           this.router.navigate(['/admin/dashboard'])
         } else {
           this.error = true

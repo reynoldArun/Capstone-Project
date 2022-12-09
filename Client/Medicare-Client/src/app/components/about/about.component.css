@@ -1,0 +1,53 @@
+.about {
+    height: 100vh;
+    padding: 0 3rem;
+
+}
+
+.about__container {
+    align-items: center;
+    margin-top: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.about__image {
+    border: 5px solid #FFA700;
+}
+
+
+.about__content {
+    width: 40%;
+
+}
+
+.about__content>h1 {
+    font-size: 3rem;
+}
+
+.about__content>h5 {
+    font-size: 1rem;
+    margin: 5px 0px;
+}
+
+.about__title {
+    text-align: center;
+    text-transform: upper;
+    font-size: 5rem;
+
+}
+
+.about__btn {
+    border: 3px solid #FFA700;   
+    width: 12.5rem;
+    height: 2.8125rem;
+    border-radius: 50px;
+    background-color: #FFA700;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+
+}

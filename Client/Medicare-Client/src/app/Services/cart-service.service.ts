@@ -19,5 +19,11 @@ export class CartServiceService {
   public updateCart(cart:any, id:any) {
     return this.http.put("http://localhost:9003/update/"+id, cart, {responseType: 'text' as 'json'});
   }
-  
+
+  public addToCart(mid:any, cid:any) {
+    return this.http.get<any>("http://localhost:8080/cart/add/"+mid+"/"+cid)
+  }
+
 }
+  
+
