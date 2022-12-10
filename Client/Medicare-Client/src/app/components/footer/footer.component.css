@@ -3,7 +3,8 @@
 }
 
 hr {
-    border: 1px solid grey;
+    border: 1px solid var(--yellow-color);
+    margin-bottom: 1rem;
 }
 
 .footer__grid {
@@ -24,6 +25,20 @@ hr {
 
 .footer__grid>ul>li {
     margin: 5px 0px;
+}
+
+.sub-btn {
+    margin-top: 10px;
+    color: white;
+    font-weight: 900;
+    box-shadow: 5px 5px 5px grey;
+}
+
+input {
+    height: 30px;
+    padding: 0px 5px;
+    width: 200px;
+    box-shadow: 5px 5px 5px grey;
 }
 
 
@@ -47,5 +62,9 @@ hr {
 
     .footer__grid {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .foot_lower > p  {
+        margin: 10px 0px;
     }
 }

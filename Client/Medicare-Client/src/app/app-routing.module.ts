@@ -12,6 +12,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { ShowusersComponent } from './components/showusers/showusers.component';
 import { CreateproductComponent } from './components/createproduct/createproduct.component';
 import { CreateuserComponent } from './components/createuser/createuser.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+
 
 const routes: Routes = [
   {path: 'home', component:HomeComponent },
@@ -25,7 +27,8 @@ const routes: Routes = [
   {path: 'admin/dashboard/users', component:ShowusersComponent, canActivate: [UserGuard]},
   {path: 'admin/dashboard/createproducts', component:CreateproductComponent, canActivate: [UserGuard]},
   {path: 'admin/dashboard/createusers', component:CreateuserComponent, canActivate: [UserGuard]},
-  {path: 'products', component:ViewproductsComponent}
+  {path: 'products', component:ViewproductsComponent},
+  {path: '**', pathMatch: 'full', component:PagenotfoundComponent}
 
 ];
 

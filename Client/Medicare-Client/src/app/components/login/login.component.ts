@@ -11,7 +11,8 @@ export class LoginComponent implements OnInit {
 
   userEmail:any = ''
   userPassword:any = ''
-  error:any;
+  error:boolean= false;
+  message:String= ''
 
   constructor(private Service: UserServiceService, private router: Router) { }
 
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/home'])
         } else {
           this.error = true
+          this.message = 'Username Password Incorrect'
           setTimeout(() => {
             this.error = false
             this.userEmail = ''

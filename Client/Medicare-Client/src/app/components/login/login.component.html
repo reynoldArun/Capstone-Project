@@ -1,21 +1,21 @@
 <app-navbar></app-navbar>
-<section class="login">
-    <div class="login__container">
-     <div class="login__title">
-         <h1>Login</h1>
-     </div>
-     <div class="login__inputs">
-        Email<input type="text" name="userEmail" [(ngModel)]="userEmail" required #email="ngModel">
-        <br><span *ngIf="email.invalid && email.touched" style="color : red">Enter a valid email</span>
-        Password<input type="password" name="userPassword" [(ngModel)]="userPassword" required #pass="ngModel">
-        <br><span *ngIf="pass.invalid && pass.touched" style="color : red">Enter a valid password</span>
-         <button class="login__btn" (click)="Login()">Login</button>
-         <br><span *ngIf="error" style="color : red">Incorrect Email and Password</span>
-     </div>
-     <div class="login__footer">
-         <p>New User - <a routerLink="/account/register">Register Here</a></p>
-         <p>Admin Login - <a routerLink="/account/admin">Login as Admin</a></p>
-     </div>
+<app-messagebox *ngIf="error" [message]="message"></app-messagebox>
+<section class="login d-flex-jc-sa">
+    <div class="login__container d-flex-jc-sa-c">
+        <div class="login__title">
+            <h1>Login</h1>
+        </div>
+        <div class="login__inputs primary-input d-flex-jc-sb-c">
+            Email<input type="text" name="userEmail" [(ngModel)]="userEmail" required #email="ngModel" />
+            <br /><span class="error-color" *ngIf="email.invalid && email.touched">Enter a valid email</span>
+            Password<input type="password" name="userPassword" [(ngModel)]="userPassword" required #pass="ngModel" />
+            <br /><span class="error-color" *ngIf="pass.invalid && pass.touched">Enter a valid password</span>
+            <button class="primary-btn" (click)="Login()">Login</button>
+        </div>
+        <div class="login__footer">
+            <p>New User - <a routerLink="/account/register">Register Here</a></p>
+            <p>Admin Login - <a routerLink="/account/admin">Login as Admin</a></p>
+        </div>
     </div>
- </section>
- <app-footer></app-footer>
+</section>
+<app-footer></app-footer>

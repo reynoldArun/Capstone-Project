@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -17,3 +19,97 @@ li {
     list-style: none;
 }
 
+/* helper css */
+
+.d-flex-jc-sa {
+    display: flex;
+    justify-content: space-around;
+}
+
+.d-flex-jc-sa-c {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.d-flex-jc-sb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-flex-jc-sb-c {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.primary-btn {
+    background-color: #FFA700;
+    border: none;
+    font-weight: 900;
+    height: 2rem;
+    width: 5rem;
+}
+
+.primary-input>input {
+    width: 9.375rem;
+    height: 25px;
+}
+
+.error-color {
+    color: indianred;
+}
+
+:root {
+    --primary-border: 5px solid #FFA700;
+    --bg-white-color: #FFFFFF;
+    --bg-light-color:#E7F3F1;
+    --yellow-color: #FFA700;
+    --p-shadow:5px 5px 5px grey;
+    --p-weight: 900;
+    --p-color: whitesmoke;
+}
+
+/* admin register login */
+.register,
+.login,
+.admin {
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+}
+
+.register__container,
+.login__container,
+.admin__container {
+    width: 25rem;
+    height: 25rem;
+    border: var(--primary-border);
+    background-color: var(--bg-white-color);
+    margin: auto;
+
+}
+
+.register__inputs,
+.login__inputs,
+.admin__inputs {
+    align-items: center;
+    height: 12.5rem;
+}
+
+.register__inputs>input,
+.login__inputs>input,
+.admin__inputs>input {
+    width: 9.375rem;
+    height: 25px;
+    align-items: center;
+}
+
+.register__footer>a,
+.login__footer>a,
+.admin__footer>a {
+    cursor: pointer;
+    text-decoration: underline;
+}

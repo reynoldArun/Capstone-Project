@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ErrorboxComponent } from './errorbox.component';
+import { PagenotfoundComponent } from './pagenotfound.component';
 
-describe('ErrorboxComponent', () => {
-  let component: ErrorboxComponent;
-  let fixture: ComponentFixture<ErrorboxComponent>;
+describe('PagenotfoundComponent', () => {
+  let component: PagenotfoundComponent;
+  let fixture: ComponentFixture<PagenotfoundComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ErrorboxComponent ]
+      declarations: [ PagenotfoundComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ErrorboxComponent);
+    fixture = TestBed.createComponent(PagenotfoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

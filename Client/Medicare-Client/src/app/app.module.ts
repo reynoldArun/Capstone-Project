@@ -13,7 +13,6 @@ import { AdminDashboardComponent } from './components/admin-dashboard/admin-dash
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { ErrorboxComponent } from './components/errorbox/errorbox.component';
 import { CreateuserComponent } from './components/createuser/createuser.component';
 import { CreateproductComponent } from './components/createproduct/createproduct.component';
 import { ShowusersComponent } from './components/showusers/showusers.component';
@@ -22,6 +21,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeroComponent } from './components/hero/hero.component';
 import { ViewproductsComponent } from './components/viewproducts/viewproducts.component';
 import { MessageboxComponent } from './components/messagebox/messagebox.component';
+import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +35,6 @@ import { MessageboxComponent } from './components/messagebox/messagebox.componen
     AdminComponent,
     AdminDashboardComponent,
     HomeComponent,
-    ErrorboxComponent,
     CreateuserComponent,
     CreateproductComponent,
     ShowusersComponent,
@@ -42,7 +42,9 @@ import { MessageboxComponent } from './components/messagebox/messagebox.componen
     AboutComponent,
     HeroComponent,
     ViewproductsComponent,
-    MessageboxComponent
+    MessageboxComponent,
+    PagenotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,

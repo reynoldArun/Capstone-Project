@@ -1,6 +1,6 @@
 .dashboard {
     text-align: center;
-    background: #E7F3F1;
+    background: var(--bg-light-color);
     height: 100vh;
 }
 
@@ -12,26 +12,24 @@
 .dashlink {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 120px;
+    margin: 7.5rem;
 }
 
 .dashlink>a {
     margin: 0px 50px;
     font-size: 2rem;
-
 }
 
-
 .card {
-    width: 250px;
-    height: 300px;
+    width: 15.625rem;
+    height: 18.75rem;
     background-color: #FFFFFF;
     box-shadow: 0 1.5rem 2.5rem -.5rem rgba(#000000, .1);
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
-    
+
 }
 
 hr {
@@ -40,10 +38,10 @@ hr {
 }
 
 .card:hover {
-    background-color: #FFA700;
+    background-color: var(--yellow-color);
 }
 
-.card__info > h1 {
+.card__info>h1 {
     margin-top: 20px;
 }
 
@@ -54,6 +52,6 @@ h2 {
 a {
     all: unset;
     font-size: 1rem;
-    font-weight: 900;
+    font-weight: var(--p-weight);
 
 }

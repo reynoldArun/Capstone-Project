@@ -14,6 +14,9 @@ export class AdminComponent implements OnInit {
   adminUsername: any = ''
   adminPass: any = ''
   error:boolean=false;
+  message:any;
+
+
   ngOnInit(): void { }
 
   admin() {
@@ -23,6 +26,7 @@ export class AdminComponent implements OnInit {
           localStorage.setItem('token', 'admintoken')
           this.router.navigate(['/admin/dashboard'])
         } else {
+          this.message = 'Failed to Login as Admin'
           this.error = true
           setTimeout(() => {
             this.error = false

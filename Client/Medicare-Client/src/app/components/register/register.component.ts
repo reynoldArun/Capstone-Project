@@ -12,6 +12,7 @@ export class RegisterComponent implements OnInit {
 
   user:User = new User()
   errorMessage=false
+  message ='Something went Wrong !!';
 
   constructor(private Service: UserServiceService, private router: Router) { }
 
