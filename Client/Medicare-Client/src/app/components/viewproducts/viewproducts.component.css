@@ -1,81 +1,80 @@
 .medicine {
-    background: #E7F3F1;
-    height: fit-content;
+    background: var(--bg-light-color);
+    height: 100vh;
 }
 
-.medicine > h1 {
+.medicine>h1 {
     text-align: center;
     font-size: 3rem;
-    margin: 20px 0px;
+    margin: 1.25rem 0rem;
 }
 
 .medicine__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 20px;
+    column-gap: 0.625rem;
+    row-gap: 1.25rem;
     width: 90%;
-    margin: 30px auto;
+    margin: 1.875rem auto;
     text-align: center;
 
 }
 
 .medicine__items {
-    background-color: #FFFFFF;
-    border-radius: 10px;
+    background-color: var(--bg-white-color);
+    border-radius: 0.625rem;
     height: fit-content;
-    padding: 10px;
-    box-shadow: 3px 3px 3px grey;
+    padding: 0.625rem;
+    box-shadow: var(--s-shadow);
 }
 
 
 img {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
 }
 
 .medicine__btn {
     width: 90%;
-    background: #10847E;
+    background: var(--bg-green-color);
     color: white;
-    font-weight: 900;
+    font-weight: var(--p-weight);
     border-radius: 5px;
-    border: none;
-    height: 30px;
-    margin-top: 10px;
-    cursor: pointer;
+    height: 1.875rem;
+    margin-top: 0.625rem;
+
 }
 
-.medicine__lower > h2 {
+.medicine__lower>h2 {
     margin: 5px 0px;
 }
 
 
-
+/* media queries */
 
 @media screen and (min-width: 575px) {
     .medicine__container {
         grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 15px;
-        row-gap: 20px;
-        
+        column-gap: 1rem;
+        row-gap: 1.25rem;
+
     }
 }
 
 @media screen and (min-width: 899px) {
     .medicine__container {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        column-gap: 20px;
-        row-gap: 25px;
-        
+        column-gap: 1.25rem;
+        row-gap: 1.5625rem;
+
     }
 }
 
 @media screen and (min-width: 1200px) {
     .medicine__container {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        column-gap: 35px;
-        row-gap: 30px;
-        
+        column-gap: 2rem;
+        row-gap: 1.8rem;
+
     }
 }

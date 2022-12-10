@@ -19,6 +19,11 @@ li {
     list-style: none;
 }
 
+button {
+    cursor: pointer;
+    border: none;
+}
+
 /* helper css */
 
 .d-flex-jc-sa {
@@ -62,11 +67,16 @@ li {
 
 :root {
     --primary-border: 5px solid #FFA700;
+    --secondary-border: 1px solid black;
     --bg-white-color: #FFFFFF;
-    --bg-light-color:#E7F3F1;
+    --bg-light-color: #E7F3F1;
+    --bg-green-color: #10847E;
     --yellow-color: #FFA700;
-    --p-shadow:5px 5px 5px grey;
+    --s-shadow: 3px 3px 3px grey;
+    --p-shadow: 5px 5px 5px grey;
     --p-weight: 900;
+    --p-weight-small:300;
+    --p-weight-med:600;
     --p-color: whitesmoke;
 }
 
@@ -112,4 +122,52 @@ li {
 .admin__footer>a {
     cursor: pointer;
     text-decoration: underline;
+}
+
+/* showproducts showuser */
+.showproduct,
+.showusers {
+    background: var(--bg-light-color);
+    height: 100vh;
+
+}
+
+.showproduct>h1,
+.showusers>h1 {
+    text-align: center;
+    padding-top: 1.25rem;
+    font-size: 2.5rem;
+}
+
+.showproduct>table,
+.showusers>table {
+    margin: 1.875rem auto;
+    width: 75rem;
+    text-align: center;
+    border: var(--secondary-border);
+    background-color: var(--bg-white-color);
+    box-shadow: 0 1.5rem 2.5rem -.5rem rgba(#000000, .1);
+}
+
+.showproduct>table>tr>th,
+.showusers>table>tr>th {
+    border: var(--secondary-border);
+    height: 2.8125rem;
+}
+
+.showproduct>table>tr>td,
+.showusers>table>tr>td {
+    border: var(--secondary-border);
+    height: 2.5rem;
+}
+
+.backtodashboard {
+    align-items: center;
+    margin: auto;
+}
+
+.backtodashboard>h1:first-child {
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 1.2rem;
 }
