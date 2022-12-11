@@ -56,6 +56,16 @@ button {
     width: 5rem;
 }
 
+.secondary-btn {
+    background-color: #FFA700;
+    border: none;
+    font-weight: 900;
+    height: 2rem;
+    width: 8rem;
+    color: white;
+    box-shadow: var(--s-shadow);
+}
+
 .primary-input>input {
     width: 9.375rem;
     height: 25px;
@@ -171,3 +181,51 @@ button {
     cursor: pointer;
     font-size: 1.2rem;
 }
+
+/* create user create product */
+.user, .product {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 50px auto;
+    height: 100vh;
+    background: var(--bg-light-color);
+ 
+ }
+ 
+ .user__left, .product__left {
+     border: var(--primary-border);
+     width: 100%;
+     background-color: var(--bg-white-color);
+     height: fit-content;
+ }
+ 
+ .user__right, .product__right {
+     margin-top: 2rem;
+     height: fit-content;
+     align-items: center;
+     height: 18.5rem;
+     display: flex;
+     justify-content: space-between;
+     flex-direction: column;
+ }
+ 
+ 
+ .user__left > img, .product__left > img {
+     width:  inherit;
+     height: inherit;
+    
+ }
+ 
+ .user__right >input, .product__right > input {
+     width: 9.375rem;
+     height: 25px;
+ }
+ 
+
+ @media screen and (min-width: 699px) {
+     .user, .product {
+         grid-template-columns: 1fr 1fr;
+         
+     }
+ }

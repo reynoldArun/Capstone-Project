@@ -4,7 +4,7 @@
     <h1>View Medicines</h1>
     <div class="medicine__container">
         <div class="medicine__items" *ngFor="let product of products">
-            <img src="" alt="">
+            <img src="../../../assets/images/{{product.img}}.png" alt="product-img">
             <div class="medicine__lower">
                 <h2>{{product.productName}}</h2>
                 <h3>&#8377; {{product.amount}}</h3>

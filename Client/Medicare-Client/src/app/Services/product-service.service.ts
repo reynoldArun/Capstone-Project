@@ -17,4 +17,8 @@ export class ProductServiceService {
     return this.http.delete("http://localhost:9002/delete/"+id, {responseType: 'text' as 'json'})
   }
 
+  public createProduct(medicine:any) {
+    return this.http.post("http://localhost:9002/add", medicine, {responseType: 'text' as 'json'})
+  }
+
 }
