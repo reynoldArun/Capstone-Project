@@ -3,6 +3,7 @@ package com.medicare.capstone.medicareuserservice.Controller;
 import com.medicare.capstone.medicareuserservice.Dto.UserDto;
 import com.medicare.capstone.medicareuserservice.Entity.User;
 import com.medicare.capstone.medicareuserservice.Service.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping("/add")
-    public ResponseEntity<String> CreateUser(@RequestBody UserDto userDto) {
+    public ResponseEntity<String> CreateUser(@Valid @RequestBody UserDto userDto) {
         return ResponseEntity.status(200).body(userService.CreateUser(userDto));
     }
 
@@ -33,7 +34,7 @@ public class UserController {
     }
 
     @PutMapping("/update")
-    public ResponseEntity<String> UpdateUser(@RequestBody UserDto userDto) {
+    public ResponseEntity<String> UpdateUser(@Valid @RequestBody UserDto userDto) {
         return ResponseEntity.status(200).body(userService.UpdateUser(userDto));
     }
 
