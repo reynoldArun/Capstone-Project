@@ -22,6 +22,10 @@ import { HeroComponent } from './components/hero/hero.component';
 import { ViewproductsComponent } from './components/viewproducts/viewproducts.component';
 import { MessageboxComponent } from './components/messagebox/messagebox.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
+import { UpdateuserComponent } from './components/updateuser/updateuser.component';
+import { UpdateproductComponent } from './components/updateproduct/updateproduct.component';
+import { SearchComponent } from './components/search/search.component';
+import { CreateadminComponent } from './components/createadmin/createadmin.component';
 
 
 @NgModule({
@@ -44,6 +48,10 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
     ViewproductsComponent,
     MessageboxComponent,
     PagenotfoundComponent,
+    UpdateuserComponent,
+    UpdateproductComponent,
+    SearchComponent,
+    CreateadminComponent,
     
   ],
   imports: [

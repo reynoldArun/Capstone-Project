@@ -11,5 +11,8 @@ export class AdminServiceService {
   public GetAllAdmin() {
     return this.http.get<any>("http://localhost:8080/admin/all");
   }
+  public CreateAdmin(admin:any) {
+    return this.http.post("http://localhost:9000/add", admin, {responseType: 'text' as 'json'})
+  }
 
 }

@@ -11,20 +11,21 @@
 
 .dashlink {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin: 7.5rem;
+    grid-template-columns: 1fr;
+    margin: 2.5rem;
+    row-gap: 20px;
 }
 
 .dashlink>a {
-    margin: 0px 50px;
+    margin: 0px 1rem;
     font-size: 2rem;
 }
 
 .card {
     width: 15.625rem;
     height: 18.75rem;
-    background-color: #FFFFFF;
-    box-shadow: 0 1.5rem 2.5rem -.5rem rgba(#000000, .1);
+    background-color: var(--bg-white-color);
+    box-shadow: 10px 10px 10px grey;
     border-radius: 5px;
     display: flex;
     justify-content: space-around;
@@ -54,4 +55,32 @@ a {
     font-size: 1rem;
     font-weight: var(--p-weight);
 
+}
+
+@media screen and (min-width: 597px) {
+    .dashlink {
+        grid-template-columns: 1fr 1fr;
+        margin: 1.2rem auto;
+    }
+}
+
+@media screen and (min-width: 845px) {
+    .dashlink {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 1.2rem auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .dashlink {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 1.2rem auto;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .dashlink {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        margin: 1.2rem auto;
+    }
 }
