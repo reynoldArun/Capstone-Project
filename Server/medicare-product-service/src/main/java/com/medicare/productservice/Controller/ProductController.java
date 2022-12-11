@@ -44,7 +44,10 @@ public class ProductController {
         return ResponseEntity.status(200).body(productService.CreateProduct(productDto));
     }
 
-
+    @GetMapping("/search/{productName}")
+    public Product SearchByProductName(@PathVariable String productName) {
+        return productService.findProductByProductNameContainingIgnoreCase(productName);
+    }
 
 
 }

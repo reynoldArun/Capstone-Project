@@ -21,4 +21,8 @@ export class ProductServiceService {
     return this.http.post("http://localhost:9002/add", medicine, {responseType: 'text' as 'json'})
   }
 
+  public SearchProduct(name:any) {
+    return this.http.get("http://localhost:9002/search/"+name , {responseType: 'text' as 'json'})
+  }
+  
 }

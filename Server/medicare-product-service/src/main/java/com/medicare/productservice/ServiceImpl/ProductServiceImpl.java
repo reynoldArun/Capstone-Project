@@ -56,4 +56,11 @@ public class ProductServiceImpl implements ProductService {
         productRepository.save(updateProduct);
         return "Product created!!";
     }
+
+    @Override
+    public Product findProductByProductNameContainingIgnoreCase(String productName) {
+        return productRepository.findProductByProductNameContainingIgnoreCase(productName);
+    }
+
+
 }
