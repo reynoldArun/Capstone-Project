@@ -12,8 +12,9 @@ import lombok.NoArgsConstructor;
 @Table(name = "product_table")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(unique = true)
     private String productName;
     private String img;
     private String category;

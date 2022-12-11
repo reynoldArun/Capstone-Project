@@ -4,6 +4,7 @@ package com.medicare.productservice.Controller;
 import com.medicare.productservice.Dto.ProductDto;
 import com.medicare.productservice.Entity.Product;
 import com.medicare.productservice.Service.ProductService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,7 +20,7 @@ public class ProductController {
     private ProductService productService;
 
     @PostMapping("/add")
-    public ResponseEntity<String> CreateProduct(@RequestBody ProductDto productDto) {
+    public ResponseEntity<String> CreateProduct(@Valid @RequestBody ProductDto productDto) {
         return ResponseEntity.status(200).body(productService.CreateProduct(productDto));
     }
 
@@ -39,7 +40,7 @@ public class ProductController {
     }
 
     @PostMapping("/update")
-    public ResponseEntity<String> UpdateProduct(@RequestBody ProductDto productDto) {
+    public ResponseEntity<String> UpdateProduct(@Valid @RequestBody ProductDto productDto) {
         return ResponseEntity.status(200).body(productService.CreateProduct(productDto));
     }
 

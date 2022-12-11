@@ -14,11 +14,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDto {
     private long id;
-    @Column(unique = true)
     @NotNull(message = "Username cannot be empty !!")
     private String name;
 
-    @Column(unique = true)
     @NotNull(message = "Email cannot be empty!!")
     @Email(message = "Invalid Email!!")
     private String email;

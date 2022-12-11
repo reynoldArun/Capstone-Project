@@ -3,6 +3,7 @@ package com.medicare.capstone.medicareadminservice.Controller;
 import com.medicare.capstone.medicareadminservice.Dto.AdminDto;
 import com.medicare.capstone.medicareadminservice.Entity.Admin;
 import com.medicare.capstone.medicareadminservice.Service.AdminService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class AdminController {
     private AdminService adminService;
 
     @PostMapping("/add")
-    public ResponseEntity<String> AddAdmin(@RequestBody AdminDto adminDto) {
+    public ResponseEntity<String> AddAdmin(@Valid @RequestBody AdminDto adminDto) {
         return ResponseEntity.status(200).body(adminService.AddAdmin(adminDto));
     }
 
