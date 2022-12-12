@@ -15,6 +15,6 @@
         <br><span *ngIf="amount.invalid && amount.touched" class="error-color">amount is missing</span>
         Quantity<input type="text" name="quantity" [(ngModel)]="product.quantity" required #quantity="ngModel">
         <br><span *ngIf="quantity.invalid && quantity.touched" class="error-color">Quantity is missing</span>
-        <button class="secondary-btn" (click)="CreateProduct()">Create User</button>
+        <button class="secondary-btn" (click)="CreateProduct()">Create Product</button>
     </div>
 </section>
