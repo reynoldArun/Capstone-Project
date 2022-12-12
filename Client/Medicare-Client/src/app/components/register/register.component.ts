@@ -12,7 +12,7 @@ export class RegisterComponent implements OnInit {
 
   user:User = new User()
   errorMessage=false
-  message ='Something went Wrong !!';
+  message:any;
 
   constructor(private Service: UserServiceService, private router: Router) { }
 
@@ -22,6 +22,7 @@ export class RegisterComponent implements OnInit {
   register() {
     if(this.user.name === '' || this.user.password === '' || this.user.email === '' || this.user.phoneNumber === '') {
       this.errorMessage= true
+      this.message = 'Something went Wrong !!'
         setTimeout(() => {
           this.errorMessage= false
       }, 3000);
@@ -32,9 +33,11 @@ export class RegisterComponent implements OnInit {
           alert("failed to register")
         } else {
           this.errorMessage= true
+          this.message = "Registered Succesfully!!!"
           setTimeout(() => {
             this.errorMessage= false
           }, 3000);
+          this.router.navigate(['/account/login'])
         }
       })
     }

@@ -236,9 +236,9 @@ button {
 
 @media screen and (min-width: 699px) {
 
-    .user,
-    .product,
-    .admin {
+    .user-c,
+    .product-c,
+    .admin-c {
         grid-template-columns: 1fr 1fr;
 
     }
