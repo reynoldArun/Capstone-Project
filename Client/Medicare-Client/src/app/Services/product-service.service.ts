@@ -25,4 +25,12 @@ export class ProductServiceService {
     return this.http.get("http://localhost:9002/search/"+name , {responseType: 'text' as 'json'})
   }
   
+  public GetProductById(id:any) {
+    return this.http.get<any>("http://localhost:9002/single/"+id)
+  }
+
+  public UpdateProduct(id:any, data:any) {
+    return this.http.put("http://localhost:9002/update/"+id, data, {responseType: 'text' as 'json'})
+  }
+
 }

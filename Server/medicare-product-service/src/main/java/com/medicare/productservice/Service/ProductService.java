@@ -14,7 +14,7 @@ public interface ProductService {
 
     public String DeleteProduct(long id);
 
-    public String UpdateProduct(ProductDto productDto);
+    public String UpdateProduct(long id, ProductDto productDto);
 
     Product findProductByProductNameContainingIgnoreCase(String productName);
 }

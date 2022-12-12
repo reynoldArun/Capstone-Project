@@ -5,6 +5,7 @@ import com.medicare.productservice.Dto.ProductDto;
 import com.medicare.productservice.Entity.Product;
 import com.medicare.productservice.Service.ProductService;
 import jakarta.validation.Valid;
+import jakarta.ws.rs.PUT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,9 +40,9 @@ public class ProductController {
         return ResponseEntity.status(200).body(productService.DeleteProduct(id));
     }
 
-    @PostMapping("/update")
-    public ResponseEntity<String> UpdateProduct(@Valid @RequestBody ProductDto productDto) {
-        return ResponseEntity.status(200).body(productService.CreateProduct(productDto));
+    @PutMapping("/update/{id}")
+    public ResponseEntity<String> UpdateProduct(@PathVariable long id, @RequestBody ProductDto productDto) {
+        return ResponseEntity.status(200).body(productService.UpdateProduct(id, productDto));
     }
 
     @GetMapping("/search/{productName}")

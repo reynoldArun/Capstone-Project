@@ -1,0 +1,12 @@
+section {
+    text-align: center;
+    margin: 200px auto;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
