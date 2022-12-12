@@ -1,9 +1,10 @@
 <section>
    <form>
-    Username: <input type="text"><br>
-    Email: <input type="text"><br>
-    Password: <input type="text"><br>
-    Phonenumber: <input type="text"><br>
-    <button class="secondary-btn">Update User</button>
+    Username: <input type="text" name="name" [(ngModel)]="user.name"><br>
+    Email: <input type="text" name="email" [(ngModel)]="user.email"><br>
+    Password: <input type="password" name="password" [(ngModel)]="user.password"><br>
+    Phonenumber: <input type="text" name="Phonenumber" [(ngModel)]="user.phoneNumber"><br>
+    <button class="secondary-btn" (click)="updateUser()">Update User</button>
    </form>
 </section>
+<app-messagebox [message]="message" *ngIf="error"></app-messagebox>

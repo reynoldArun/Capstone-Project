@@ -25,4 +25,8 @@ export class UserServiceService {
   public GetUserById(id:any) {
     return this.http.get("http://localhost:9001/single/"+id)
   }
+
+  public UpdateUser(id:any, data:any) {
+    return this.http.put("http://localhost:9001/update/"+id, data, {responseType: 'text' as 'json'})
+  }
 }

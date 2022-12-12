@@ -8,4 +8,5 @@
      <button class="secondary-btn" (click)="updateProduct()">Update Product</button>
     </form>
  </section>
+ <app-messagebox *ngIf="error" [message]="message"></app-messagebox>
  

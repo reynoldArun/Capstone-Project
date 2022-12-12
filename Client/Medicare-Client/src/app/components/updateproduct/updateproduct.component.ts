@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProductServiceService } from 'src/app/Services/product-service.service';
 import { Product } from 'src/Model/Product';
@@ -10,9 +10,11 @@ import { Product } from 'src/Model/Product';
 })
 export class UpdateproductComponent implements OnInit {
 
-  constructor(private Service: ProductServiceService, private active: ActivatedRoute) { }
+  constructor(private Service: ProductServiceService, private router: Router, private active: ActivatedRoute) { }
 
   updateId:any;
+  message:any;
+  error:boolean = false;
  
   products: Product = {
     productName: '',
@@ -34,7 +36,14 @@ export class UpdateproductComponent implements OnInit {
   }
   
   updateProduct() {
-    this.Service.UpdateProduct(this.updateId, this.products).subscribe(res => console.log(res))
+    this.Service.UpdateProduct(this.updateId, this.products).subscribe(res => {
+      if(res == 'Product created!!') {
+        this.router.navigate(['/admin/dashboard/products'])
+      } else {
+        this.error = true
+        this.message = 'Failed to Update Product!!!'
+      }
+    })
   }
 
 }
