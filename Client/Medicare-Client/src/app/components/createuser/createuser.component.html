@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 <app-messagebox [message]="message" *ngIf="success"></app-messagebox>
-<section class="user">
-    <div class="user__left">
+<section class="usercreate">
+    <div class="usercreate__left">
         <img src="../../../assets/images/banner.jpg" alt="banner">
     </div>
-    <div class="user__right">
+    <div class="usercreate__right">
         username<input type="text" name="username" [(ngModel)]="user.name" required #name="ngModel">
         <br><span *ngIf="name.invalid && name.touched" class="error-color">Enter a valid Name</span>
         Password<input type="password" name="password" [(ngModel)]="user.password" required #pass="ngModel">

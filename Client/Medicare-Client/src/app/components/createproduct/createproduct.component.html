@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 <app-messagebox [message]="message" *ngIf="success"></app-messagebox>
-<section class="product">
-    <div class="product__left">
+<section class="productcreate">
+    <div class="productcreate__left">
         <img src="../../../assets/images/banner.jpg" alt="banner">
     </div>
-    <div class="product__right">
+    <div class="productcreate__right">
         ProductName<input type="text" name="productname" [(ngModel)]="product.productName" required #name="ngModel">
         <br><span *ngIf="name.invalid && name.touched" class="error-color">Enter a valid Product Name</span>
         Image<input type="text" name="img" [(ngModel)]="product.img" required #img="ngModel">

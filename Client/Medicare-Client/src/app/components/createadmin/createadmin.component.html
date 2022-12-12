@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 <app-messagebox [message]="message" *ngIf="success"></app-messagebox>
-<section class="admin">
-    <div class="admin__left">
+<section class="admincreate">
+    <div class="admincreate__left">
         <img src="../../../assets/images/banner.jpg" alt="banner">
     </div>
-    <div class="admin__right">
+    <div class="admincreate__right">
         Admin Name<input type="text" name="adminname" [(ngModel)]="admin.name" required #name="ngModel">
         <br><span *ngIf="name.invalid && name.touched" class="error-color">Enter a valid Name</span>
         Password<input type="password" name="password" [(ngModel)]="admin.password" required #pass="ngModel">

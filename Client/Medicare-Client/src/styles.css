@@ -1,6 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
 
+:root {
+    --primary-border: 5px solid #FFA700;
+    --secondary-border: 1px solid black;
+    --bg-white-color: #FFFFFF;
+    --bg-light-color: #E7F3F1;
+    --bg-green-color: #10847E;
+    --yellow-color: #FFA700;
+    --s-shadow: 3px 3px 3px grey;
+    --p-shadow: 5px 5px 5px grey;
+    --p-weight: 900;
+    --p-weight-small: 300;
+    --p-weight-med: 600;
+    --p-color: whitesmoke;
+}
+
+
 *,
 *::after,
 *::before {
@@ -76,20 +92,7 @@ button {
     color: indianred;
 }
 
-:root {
-    --primary-border: 5px solid #FFA700;
-    --secondary-border: 1px solid black;
-    --bg-white-color: #FFFFFF;
-    --bg-light-color: #E7F3F1;
-    --bg-green-color: #10847E;
-    --yellow-color: #FFA700;
-    --s-shadow: 3px 3px 3px grey;
-    --p-shadow: 5px 5px 5px grey;
-    --p-weight: 900;
-    --p-weight-small: 300;
-    --p-weight-med: 600;
-    --p-color: whitesmoke;
-}
+
 
 /* admin register login */
 .register,
@@ -184,9 +187,9 @@ button {
 }
 
 /* create user create product */
-.user,
-.product,
-.admin {
+.usercreate,
+.productcreate,
+.admincreate {
     display: grid;
     grid-template-columns: 1fr;
     width: 90%;
@@ -196,18 +199,18 @@ button {
 
 }
 
-.user__left,
-.product__left,
-.admin__left {
+.usercreate__left,
+.productcreate__left,
+.admincreate__left {
     border: var(--primary-border);
     width: 100%;
     background-color: var(--bg-white-color);
     height: fit-content;
 }
 
-.user__right,
-.product__right,
-.admin__right {
+.usercreate__right,
+.productcreate__right,
+.admincreate__right {
     margin-top: 2rem;
     height: fit-content;
     align-items: center;
@@ -218,17 +221,17 @@ button {
 }
 
 
-.user__left>img,
-.product__left>img,
-.admin__left>img {
+.usercreate__left>img,
+.productcreate__left>img,
+.admincreate__left>img {
     width: inherit;
     height: inherit;
 
 }
 
-.user__right>input,
-.product__right>input,
-.admin__right>input {
+.usercreate__right>input,
+.productcreate__right>input,
+.admincreate__right>input {
     width: 9.375rem;
     height: 25px;
 }
@@ -236,10 +239,24 @@ button {
 
 @media screen and (min-width: 699px) {
 
-    .user-c,
-    .product-c,
-    .admin-c {
+    .usercreate,
+    .productcreate,
+    .admincreate {
         grid-template-columns: 1fr 1fr;
 
     }
+}
+
+/* update user update product */
+.updateuser, .updateproduct {
+    text-align: center;
+    margin: 200px auto;
+}
+
+.updateuser > form, .updateproduct >form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
 }

@@ -39,7 +39,6 @@ ul>li {
 }
 
 .about__btn {
-    border: none;
     box-shadow: var(--p-shadow);
     width: 12.5rem;
     height: 2.8125rem;
